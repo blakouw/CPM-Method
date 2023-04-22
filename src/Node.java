@@ -26,6 +26,7 @@ public class Node {
         return dependencies;
     }
 
+
     public void addDependency(Node dependency) {
         dependencies.add(dependency);
         dependency.addDependent(this);

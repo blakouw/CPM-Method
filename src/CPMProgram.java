@@ -10,15 +10,15 @@ import java.util.*;
 public class CPMProgram extends JFrame implements ActionListener {
     private final JPanel panel;
     private final JButton addButton, deleteButton, editButton, calculateButton;
-    private final JLabel nameLabel, durationLabel, dependencyLabel, criticalPathLabel, delayLabel;
+    private final JLabel nameLabel, durationLabel, dependencyLabel, criticalPathLabel, delayLabel, namesLabel, delLabel, depLabel;
     private final JTextField nameField, durationField, dependencyField;
-    private final JTextArea criticalPathArea, delayArea;
-    private final JScrollPane criticalPathScrollPane, delayScrollPane;
+    private final JTextArea criticalPathArea, delayArea, nodesArea;
+    private final JScrollPane criticalPathScrollPane, delayScrollPane, nodesScrollPane;
 
     private final Map<String, Node> nodes;
 
-    private static final int PANEL_WIDTH = 600;
-    private static final int PANEL_HEIGHT = 400;
+    private static final int PANEL_WIDTH = 700;
+    private static final int PANEL_HEIGHT = 500;
 
     public CPMProgram() {
         setTitle("Critical Path Method Program");
@@ -90,8 +90,26 @@ public class CPMProgram extends JFrame implements ActionListener {
         delayArea = new JTextArea();
         delayArea.setEditable(false);
         delayScrollPane = new JScrollPane(delayArea);
-        delayScrollPane.setBounds(220, 170, 200, 200);
+        delayScrollPane.setBounds(220, 170, 100, 200);
         panel.add(delayScrollPane);
+
+        namesLabel = new JLabel("Names:");
+        namesLabel.setBounds(330, 140, 50, 25);
+        panel.add(namesLabel);
+
+        delLabel = new JLabel("Delays:");
+        delLabel.setBounds(418, 140, 50, 25);
+        panel.add(delLabel);
+
+        depLabel = new JLabel("Dependencies:");
+        depLabel.setBounds(505, 140, 100, 25);
+        panel.add(depLabel);
+
+        nodesArea = new JTextArea();
+        nodesArea.setEditable(false);
+        nodesScrollPane = new JScrollPane(nodesArea);
+        nodesScrollPane.setBounds(330, 170, 250, 200);
+        panel.add(nodesScrollPane);
 
         Border line = BorderFactory.createLineBorder(Color.GRAY);
         Border empty = new EmptyBorder(5, 5, 5, 5);
@@ -177,8 +195,15 @@ public class CPMProgram extends JFrame implements ActionListener {
 
             // find critical path and calculate delay
             StringBuilder criticalPath = new StringBuilder();
+            StringBuilder nodesPath = new StringBuilder();
             int delay = 0;
             for (Node node : nodes.values()) {
+                nodesPath.append(node.getName()).append("\t").append(node.getDuration()).append("\t");
+                for(Node node1 : node.getDependencies()){
+                    nodesPath.append(node1.getName()).append(", ");
+                }
+                nodesPath.append(System.getProperty("line.separator"));
+
                 int slack = latestStartTimes.get(node
                 ) - earliestStartTimes.get(node);
                 if (slack == 0) {
@@ -189,6 +214,7 @@ public class CPMProgram extends JFrame implements ActionListener {
             criticalPath.delete(criticalPath.length() - 4, criticalPath.length());
             criticalPathArea.setText(criticalPath.toString());
             delayArea.setText(Integer.toString(delay));
+            nodesArea.setText(nodesPath.toString());
         }
     }
 
