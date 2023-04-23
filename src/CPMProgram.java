@@ -162,6 +162,7 @@ public class CPMProgram extends JFrame implements ActionListener {
             nameField.setText("");
             durationField.setText("");
             dependencyField.setText("");
+            updateNodeInfo();
         } else if (e.getSource() == deleteButton) {
             String name = JOptionPane.showInputDialog("Enter node name to delete:");
             Node node = nodes.get(name);
@@ -169,7 +170,26 @@ public class CPMProgram extends JFrame implements ActionListener {
             for (Node n : nodes.values()) {
                 n.removeDependency(node);
             }
-        } else if (e.getSource() == editButton) {
+            // aktualizacja JTextArea z węzłami
+            String allNodes = "";
+            for (Node n : nodes.values()) {
+                allNodes += n.getName() + "\n";
+            }
+            nodesArea.setText(allNodes);
+
+            // wyświetlenie nazwy, czasu trwania i zależności usuwanego węzła
+            String deletedNodeDetails = "Deleted node details:\n";
+            deletedNodeDetails += "Name: " + node.getName() + "\n";
+            deletedNodeDetails += "Duration: " + node.getDuration() + "\n";
+            deletedNodeDetails += "Dependencies: ";
+            for (Node dependency : node.getDependencies()) {
+                deletedNodeDetails += dependency.getName() + ", ";
+            }
+            deletedNodeDetails = deletedNodeDetails.substring(0, deletedNodeDetails.length() - 2);
+            JOptionPane.showMessageDialog(null, deletedNodeDetails);
+            updateNodeInfo();
+        }
+        else if (e.getSource() == editButton) {
             String name = JOptionPane.showInputDialog("Enter node name to edit:");
             Node node = nodes.get(name);
             nameField.setText(node.getName());
@@ -180,6 +200,7 @@ public class CPMProgram extends JFrame implements ActionListener {
                 dependencyString.append(dependency.getName()).append(",");
             }
             dependencyField.setText(dependencyString.toString());
+            updateNodeInfo();
 
         } else if (e.getSource() == calculateButton) {
             Map<Node, Integer> earliestStartTimes = new HashMap<>();
@@ -220,8 +241,7 @@ public class CPMProgram extends JFrame implements ActionListener {
                 }
                 nodesPath.append(System.getProperty("line.separator"));
 
-                int slack = latestStartTimes.get(node
-                ) - earliestStartTimes.get(node);
+                int slack = latestStartTimes.get(node) - earliestStartTimes.get(node);
                 if (slack == 0) {
                     criticalPath.append(node.getName()).append(" -> ");
                     delay += node.getDuration();
@@ -231,12 +251,32 @@ public class CPMProgram extends JFrame implements ActionListener {
             criticalPathArea.setText(criticalPath.toString());
             delayArea.setText(Integer.toString(delay));
             nodesArea.setText(nodesPath.toString());
-        } else if (e.getSource() == clearButton) {
+            updateNodeInfo();
+        }
+        else if (e.getSource() == clearButton) {
             nodes.clear();
             criticalPathArea.setText("");
             delayArea.setText("");
             nodesArea.setText("");
+            updateNodeInfo();
         }
+    }
+    private void updateNodeInfo() {
+        StringBuilder nodeInfo = new StringBuilder();
+        for (Node node : nodes.values()) {
+            nodeInfo.append(node.getName()).append("\t").append(node.getDuration()).append("\t");
+            Set<Node> dependencies = node.getDependencies();
+            if (!dependencies.isEmpty()) {
+                for (Node dependencyNode : dependencies) {
+                    nodeInfo.append(dependencyNode.getName()).append(", ");
+                }
+                nodeInfo.delete(nodeInfo.length() - 2, nodeInfo.length()); // remove the last comma
+            } else {
+                nodeInfo.append("None");
+            }
+            nodeInfo.append(System.getProperty("line.separator"));
+        }
+        nodesArea.setText(nodeInfo.toString());
     }
 
 }

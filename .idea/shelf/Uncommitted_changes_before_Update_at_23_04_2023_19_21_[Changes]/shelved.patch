@@ -1,0 +1,80 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"aeb0c081-b376-4879-bebf-a62e411520ce\" name=\"Changes\" comment=\"wkoncu działa cos niecos\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/CPMProgram.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/Node.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/App.form\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/App.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2MNTGpzwDDgogRhZNTPoMeiPTzo\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/ckami/IdeaProjects/Badania-i-logistyka&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Application.Main\">\r\n    <configuration name=\"CPMProgram\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"CPMProgram\" />\r\n      <module name=\"BadaniaLogika\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"BadaniaLogika\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.CPMProgram\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"aeb0c081-b376-4879-bebf-a62e411520ce\" name=\"Changes\" comment=\"\" />\r\n      <created>1677606951703</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1677606951703</updated>\r\n      <workItem from=\"1677606952906\" duration=\"1003000\" />\r\n      <workItem from=\"1678045143313\" duration=\"96000\" />\r\n      <workItem from=\"1678157363247\" duration=\"342000\" />\r\n      <workItem from=\"1678645136541\" duration=\"3741000\" />\r\n      <workItem from=\"1678659890577\" duration=\"2113000\" />\r\n      <workItem from=\"1679774713067\" duration=\"6247000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"wkoncu działa cos niecos\">\r\n      <created>1678662018788</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678662018788</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"wkoncu działa cos niecos\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"wkoncu działa cos niecos\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4aec812c7085805345896fb6a01be43044d3693b)
++++ b/.idea/workspace.xml	(date 1682201671078)
+@@ -1,14 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="aeb0c081-b376-4879-bebf-a62e411520ce" name="Changes" comment="wkoncu działa cos niecos">
+-      <change afterPath="$PROJECT_DIR$/src/CPMProgram.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
++    <list default="true" id="aeb0c081-b376-4879-bebf-a62e411520ce" name="Changes" comment="ALE ŚMIGA JAAA">
+       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/App.form" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/CPMProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPMProgram.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -86,7 +83,11 @@
+       <workItem from="1678157363247" duration="342000" />
+       <workItem from="1678645136541" duration="3741000" />
+       <workItem from="1678659890577" duration="2113000" />
+-      <workItem from="1679774713067" duration="6247000" />
++      <workItem from="1679774713067" duration="9488000" />
++      <workItem from="1679869129888" duration="1211000" />
++      <workItem from="1680197951771" duration="670000" />
++      <workItem from="1682027707810" duration="61000" />
++      <workItem from="1682200927609" duration="741000" />
+     </task>
+     <task id="LOCAL-00001" summary="wkoncu działa cos niecos">
+       <created>1678662018788</created>
+@@ -95,7 +96,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1678662018788</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="ALE ŚMIGA JAAA">
++      <created>1679786362117</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1679786362117</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -114,6 +122,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="wkoncu działa cos niecos" />
+-    <option name="LAST_COMMIT_MESSAGE" value="wkoncu działa cos niecos" />
++    <MESSAGE value="ALE ŚMIGA JAAA" />
++    <option name="LAST_COMMIT_MESSAGE" value="ALE ŚMIGA JAAA" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/sonarlint/issuestore/index.pb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/sonarlint/issuestore/index.pb b/.idea/sonarlint/issuestore/index.pb
+--- a/.idea/sonarlint/issuestore/index.pb	(revision 4aec812c7085805345896fb6a01be43044d3693b)
++++ b/.idea/sonarlint/issuestore/index.pb	(date 1682270424258)
+@@ -1,0 +1,3 @@
++
++S
++#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+\ No newline at end of file
