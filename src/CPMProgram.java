@@ -9,7 +9,7 @@ import java.util.*;
 
 public class CPMProgram extends JFrame implements ActionListener {
     private final JPanel panel;
-    private final JButton addButton, deleteButton, editButton, calculateButton;
+    private final JButton addButton, deleteButton, editButton, calculateButton, clearButton;
     private final JLabel nameLabel, durationLabel, dependencyLabel, criticalPathLabel, delayLabel, namesLabel, delLabel, depLabel;
     private final JTextField nameField, durationField, dependencyField;
     private final JTextArea criticalPathArea, delayArea, nodesArea;
@@ -72,6 +72,11 @@ public class CPMProgram extends JFrame implements ActionListener {
         calculateButton.setBounds(340, 100, 100, 25);
         calculateButton.addActionListener(this);
         panel.add(calculateButton);
+
+        clearButton = new JButton("Clear");
+        clearButton.setBounds(450, 100, 100, 25);
+        clearButton.addActionListener(this);
+        panel.add(clearButton);
 
         criticalPathLabel = new JLabel("Critical Path:");
         criticalPathLabel.setBounds(10, 140, 100, 25);
@@ -215,6 +220,11 @@ public class CPMProgram extends JFrame implements ActionListener {
             criticalPathArea.setText(criticalPath.toString());
             delayArea.setText(Integer.toString(delay));
             nodesArea.setText(nodesPath.toString());
+        } else if (e.getSource() == clearButton) {
+            nodes.clear();
+            criticalPathArea.setText("");
+            delayArea.setText("");
+            nodesArea.setText("");
         }
     }
 
