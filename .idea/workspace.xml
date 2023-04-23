@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aeb0c081-b376-4879-bebf-a62e411520ce" name="Changes" comment="wkoncu działa cos niecos" />
+    <list default="true" id="aeb0c081-b376-4879-bebf-a62e411520ce" name="Changes" comment="wkoncu działa cos niecos">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CPMProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPMProgram.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +40,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sowa0/IdeaProjects/lab2java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ckami/IdeaProjects/Badania-i-logistyka&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -79,9 +83,6 @@
       <workItem from="1678645136541" duration="3741000" />
       <workItem from="1678659890577" duration="2113000" />
       <workItem from="1679774713067" duration="6247000" />
-      <workItem from="1679908014050" duration="3772000" />
-      <workItem from="1682162923115" duration="7619000" />
-      <workItem from="1682262662267" duration="574000" />
     </task>
     <task id="LOCAL-00001" summary="wkoncu działa cos niecos">
       <created>1678662018788</created>
@@ -110,5 +111,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="wkoncu działa cos niecos" />
     <option name="LAST_COMMIT_MESSAGE" value="wkoncu działa cos niecos" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Badania_i_logistyka$Main.ic" NAME="Main Coverage Results" MODIFIED="1682271961232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
