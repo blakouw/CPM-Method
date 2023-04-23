@@ -146,14 +146,13 @@ public class CPMProgram extends JFrame implements ActionListener {
 
             nodes.put(name, node);
 
-            // display the name, duration, and dependencies of the newly added node
             String newNodeInfo = "" + node.getName() + "\t" + node.getDuration() + "\t";
             Set<Node> dependencies = node.getDependencies();
             if (!dependencies.isEmpty()) {
                 for (Node dependencyNode : dependencies) {
                     newNodeInfo += dependencyNode.getName() + ", ";
                 }
-                newNodeInfo = newNodeInfo.substring(0, newNodeInfo.length() - 2); // remove the last comma
+                newNodeInfo = newNodeInfo.substring(0, newNodeInfo.length() - 2);
             } else {
                 newNodeInfo += "None";
             }
@@ -289,7 +288,7 @@ public class CPMProgram extends JFrame implements ActionListener {
                 for (Node dependencyNode : dependencies) {
                     nodeInfo.append(dependencyNode.getName()).append(", ");
                 }
-                nodeInfo.delete(nodeInfo.length() - 2, nodeInfo.length()); // remove the last comma
+                nodeInfo.delete(nodeInfo.length() - 2, nodeInfo.length());
             } else {
                 nodeInfo.append("None");
             }
