@@ -102,8 +102,8 @@ public class CPMProgram extends JFrame implements ActionListener {
         namesLabel.setBounds(330, 140, 50, 25);
         panel.add(namesLabel);
 
-        delLabel = new JLabel("Delays:");
-        delLabel.setBounds(418, 140, 50, 25);
+        delLabel = new JLabel("Durations:");
+        delLabel.setBounds(418, 140, 100, 25);
         panel.add(delLabel);
 
         depLabel = new JLabel("Dependencies:");
@@ -113,7 +113,7 @@ public class CPMProgram extends JFrame implements ActionListener {
         nodesArea = new JTextArea();
         nodesArea.setEditable(false);
         nodesScrollPane = new JScrollPane(nodesArea);
-        nodesScrollPane.setBounds(330, 170, 250, 200);
+        nodesScrollPane.setBounds(330, 170, 260, 200);
         panel.add(nodesScrollPane);
 
         Border line = BorderFactory.createLineBorder(Color.GRAY);

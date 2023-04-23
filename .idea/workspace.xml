@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aeb0c081-b376-4879-bebf-a62e411520ce" name="Changes" comment="wkoncu działa cos niecos">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CPMProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPMProgram.java" afterDir="false" />
-    </list>
+    <list default="true" id="aeb0c081-b376-4879-bebf-a62e411520ce" name="Changes" comment="wkoncu działa cos niecos" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +81,7 @@
       <workItem from="1679774713067" duration="6247000" />
       <workItem from="1679908014050" duration="3772000" />
       <workItem from="1682162923115" duration="7619000" />
-      <workItem from="1682262662267" duration="309000" />
+      <workItem from="1682262662267" duration="574000" />
     </task>
     <task id="LOCAL-00001" summary="wkoncu działa cos niecos">
       <created>1678662018788</created>
