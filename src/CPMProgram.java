@@ -192,15 +192,19 @@ public class CPMProgram extends JFrame implements ActionListener {
         else if (e.getSource() == editButton) {
             String name = JOptionPane.showInputDialog("Enter node name to edit:");
             Node node = nodes.get(name);
-            nameField.setText(node.getName());
-            durationField.setText(Integer.toString(node.getDuration()));
-            Set<Node> dependencies = node.getDependencies();
-            StringBuilder dependencyString = new StringBuilder();
-            for (Node dependency : dependencies) {
-                dependencyString.append(dependency.getName()).append(",");
+            if (node != null) { // check if node exists
+                nameField.setText(node.getName());
+                durationField.setText(Integer.toString(node.getDuration()));
+                Set<Node> dependencies = node.getDependencies();
+                StringBuilder dependencyString = new StringBuilder();
+                for (Node dependency : dependencies) {
+                    dependencyString.append(dependency.getName()).append(",");
+                }
+                dependencyField.setText(dependencyString.toString());
+                updateNodeInfo();
+            } else {
+                JOptionPane.showMessageDialog(null, "Node does not exist.", "Error", JOptionPane.ERROR_MESSAGE);
             }
-            dependencyField.setText(dependencyString.toString());
-            updateNodeInfo();
 
         } else if (e.getSource() == calculateButton) {
             Map<Node, Integer> earliestStartTimes = new HashMap<>();
@@ -210,8 +214,11 @@ public class CPMProgram extends JFrame implements ActionListener {
             for (Node node : nodes.values()) {
                 int earliestStartTime = 0;
                 for (Node dependency : node.getDependencies()) {
-                    int dependencyEndTime = earliestStartTimes.get(dependency) + dependency.getDuration();
-                    earliestStartTime = Math.max(earliestStartTime, dependencyEndTime);
+                    Integer dependencyStartTime = earliestStartTimes.get(dependency);
+                    if (dependencyStartTime != null) {
+                        int dependencyEndTime = dependencyStartTime + dependency.getDuration();
+                        earliestStartTime = Math.max(earliestStartTime, dependencyEndTime);
+                    }
                 }
                 earliestStartTimes.put(node, earliestStartTime);
             }
@@ -219,13 +226,19 @@ public class CPMProgram extends JFrame implements ActionListener {
             // calculate latest start times
             int totalDuration = 0;
             for (Node node : nodes.values()) {
-                totalDuration = Math.max(totalDuration, earliestStartTimes.get(node) + node.getDuration());
+                Integer earliestStartTime = earliestStartTimes.get(node); // use Integer instead of int to avoid NPE
+                if (earliestStartTime != null) {
+                    totalDuration = Math.max(totalDuration, earliestStartTime + node.getDuration());
+                }
             }
             latestStartTimes.put(nodes.get("END"), totalDuration);
             for (Node node : nodes.values()) {
                 int latestStartTime = latestStartTimes.get(nodes.get("END")) - node.getDuration();
                 for (Node dependent : node.getDependents()) {
-                    latestStartTime = Math.min(latestStartTime, earliestStartTimes.get(dependent) - node.getDuration());
+                    Integer earliestStartTime = earliestStartTimes.get(dependent); // use Integer instead of int to avoid NPE
+                    if (earliestStartTime != null) {
+                        latestStartTime = Math.min(latestStartTime, earliestStartTime - node.getDuration());
+                    }
                 }
                 latestStartTimes.put(node, latestStartTime);
             }
@@ -235,24 +248,30 @@ public class CPMProgram extends JFrame implements ActionListener {
             StringBuilder nodesPath = new StringBuilder();
             int delay = 0;
             for (Node node : nodes.values()) {
-                nodesPath.append(node.getName()).append("\t").append(node.getDuration()).append("\t");
-                for(Node node1 : node.getDependencies()){
-                    nodesPath.append(node1.getName()).append(", ");
-                }
-                nodesPath.append(System.getProperty("line.separator"));
+                Integer earliestStartTime = earliestStartTimes.get(node); // use Integer instead of int to avoid NPE
+                if (earliestStartTime != null) {
+                    nodesPath.append(node.getName()).append("\t").append(node.getDuration()).append("\t");
+                    for (Node node1 : node.getDependencies()) {
+                        nodesPath.append(node1.getName()).append(", ");
+                    }
+                    nodesPath.append(System.getProperty("line.separator"));
 
-                int slack = latestStartTimes.get(node) - earliestStartTimes.get(node);
-                if (slack == 0) {
-                    criticalPath.append(node.getName()).append(" -> ");
-                    delay += node.getDuration();
+                    int slack = latestStartTimes.get(node) - earliestStartTime;
+                    if (slack == 0) {
+                        criticalPath.append(node.getName()).append(" -> ");
+                        delay += node.getDuration();
+                    }
                 }
             }
-            criticalPath.delete(criticalPath.length() - 4, criticalPath.length());
+            if (criticalPath.length() >= 4) { // check if criticalPath has at least 4 characters
+                criticalPath.delete(criticalPath.length() - 4, criticalPath.length());
+            }
             criticalPathArea.setText(criticalPath.toString());
             delayArea.setText(Integer.toString(delay));
             nodesArea.setText(nodesPath.toString());
             updateNodeInfo();
         }
+
         else if (e.getSource() == clearButton) {
             nodes.clear();
             criticalPathArea.setText("");
